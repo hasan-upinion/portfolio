@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hasan's Portfolio</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./animate.css">
+
+</head>
+
+<body>
+    <div class="menuContainer">
+        <div class="menu animated">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="menuButtonContainer">
+            <a class="menuButton" aria-describedby="Menu Button.">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="modal" id="modal">
+        <div class="modalContent">
+            <div class="modalHeader"> Modal Header</div>
+            <div class="modalBody">Modal Body!!</div>
+            <div class="modalFooter">Modal Footer!!</div>
+
+        </div>
+    </div>
+
+    <div class="container animated bounceInDown" id="home">
+
+        <main>
+            <div class="homeDescContainer">
+                <div class="homeDesc">
+                    Hello! Welcome to my portfolio!
+                </div>
+
+                <a href="#about" class="downArrow animated">
+                    <span class="arrowText">
+                        About
+                    </span>
+                </a>
+            </div>
+        </main>
+
+        <section id="about">
+            <div class="about">
+                <h2>
+                    This is Hasan. I'm a full-stack developer.
+                </h2>
+                <p>
+                    I love working on a front&back-end development. My strategy has always been self-learning, and figuring out what I find important
+                    to me; which is building new things and learn more during the process. In other words, programming is
+                    my passion!
+                </p>
+                <div class="skills">
+                    No skills yet!
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="portfolio">
+                <h2>
+                    Projects
+                </h2>
+                <h3>
+                    These are some of my projects that I've done.
+                </h3>
+                <div class="projects">
+                    No projects yet!
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact">
+                <h2>Thanks for taking the time to contact me.</h2>
+                <form enctype="text/plain" method="POST" id="contact-form">
+                    <input placeholder="Your Name." type="text" name="name" required="">
+                    <input placeholder="Your email." type="email" name="email" required="">
+                    <textarea placeholder="Your Message." type="text" name="message"></textarea>
+                    <input class="button" type="submit" id="submit" value="Go!">
+                    <div id="success" class="animated fadeIn hide">
+                        <div>Will get back to you very soon. Thanks!</div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                Created By Hasan_Sh.
+            </p>
+            <div class="links">
+
+                <a href="https://nl.linkedin.com/in/hasan-sh-367428125" target="_blank">Linkedin</a>
+                <a href="https://github.com/hasanshahoud" target="_blank">Github</a>
+                <a href="https://codepen.io/Shahoud/" target="_blank">Codepen</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
