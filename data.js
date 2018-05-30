@@ -46,7 +46,7 @@ const projects = [
       'DatHuis was established to provide insight into the quality and services of brokers.',
     position:
       'I have done an intrenship at dathuis for 6 months as a front/back-end dev. We used ReactJs and Redux in the front-end and for the back-end NodeJS and MongoDB.',
-    url: 'www.dathuis.nl'
+    url: 'https://www.dathuis.nl'
   },
   {
     name: 'Hyfer',
