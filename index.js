@@ -74,20 +74,23 @@ function openModal(id) {
   const img = `
     <img src="${id ? id : './assets/noImage.png'}" class="modalHeaderImage" >
   `
-  const headerText = `<h3 class="modalHeaderText">${project.name}</h3>`
-  const bodyText = `
-    <p class="position">${project.position}</p>
+  const projectName = `<h2 class="modalHeaderText">${project.name}</h2>`
+  const position = `
+    <p data-title='Position' class="position">${project.position}</p>
   `
   const link = `<a  href="${
     project.url
   }" target="_blank" class="link">See website</a>`
 
-  header.innerHTML = `
+  body.innerHTML = `
     ${img} 
-    <p>${project.description}</p> ${headerText}
+    ${link}
   `
-  body.innerHTML = `${bodyText} `
-  footer.innerHTML = `<button class="closeModal">Close</button> ${link}`
+  header.innerHTML = `${projectName} `
+  footer.innerHTML = `
+  <p data-title='Description'>${
+    project.description
+  }</p> ${position} <button class="closeModal">Close</button>`
   footer.querySelector('.closeModal').addEventListener('click', closeModal)
 
   modal.addEventListener('click', handleModalClick)
