@@ -62,8 +62,8 @@ function onContactSubmit(e) {
 }
 
 function openModal(id) {
+  console.log('the id', id)
   const project = projects.find(project => project.src === id)
-  // console.log(project)
   modal.style.display = 'flex'
   modal.classList.add('show')
   const modalContent = modal.querySelector('.modalContent')
@@ -130,7 +130,7 @@ skillsEl.innerHTML = skillsHtml
 let projectsHtml = ''
 for (const project of projects) {
   const html = `
-  <div class="project animated fade-in" id="${project.src}">
+  <a class="project animated fade-in" onclick="openModal('${project.src}')">
   <img class="projectImg ${!project.src ? 'noImage' : ''}" src="${
     project.src ? project.src : './assets/noImage.png'
   }" alt="${project.name} Photo" >
@@ -138,7 +138,7 @@ for (const project of projects) {
   <button class="learnMore"  id="${
     project.src
   }" onclick="openModal(this.id)">Read More!</button>
-  </div>
+  </a>
   `
   projectsHtml += html
 }
