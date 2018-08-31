@@ -4,17 +4,12 @@
 
 const skills = [
   {
-    title: 'HTML',
-    percentage: 75
-  },
-
-  {
-    title: 'css',
-    percentage: 85
-  },
-  {
     title: 'js',
     percentage: 80
+  },
+  {
+    title: 'python',
+    percentage: 65
   },
   {
     title: 'nodejs',
@@ -25,12 +20,29 @@ const skills = [
     percentage: 90
   },
   {
+    title: 'react native',
+    percentage: 65
+  },
+  {
     title: 'angular',
     percentage: 65
   },
   {
     title: 'mysql',
     percentage: 60
+  },
+  {
+    title: 'webpack',
+    percentage: 70
+  },
+  {
+    title: 'HTML',
+    percentage: 75
+  },
+
+  {
+    title: 'css',
+    percentage: 85
   },
   {
     title: 'cms',
@@ -58,16 +70,7 @@ const projects = [
     url: 'http://hyfer.hackyourfuture.net/timeline'
   },
   {
-    name: 'Simple Todo App',
-    src: './assets/todo.png',
-    description:
-      'Orgenizing schedules and have a good overview over my appointments I built this app.',
-    position:
-      'This app has two versions. One with is Angular and Css, and the other is with Angular and Angular Material.',
-    url: 'https://github.com/hasanshahoud/todoApp.AngularJs2'
-  },
-  {
-    name: 'See my Other repositories.',
+    name: 'See my other repositories.',
     src: './assets/repos.PNG',
     description: 'Visit my repositories and other projects I am involved in.',
     position: 'owner',

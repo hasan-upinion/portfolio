@@ -274,6 +274,8 @@ section {
   background: #92da72;
   padding: 0 2px;
   color: purple;
+  display: flex;
+  align-items: flex-end;
 }
 
 .percentage {
@@ -333,7 +335,7 @@ section {
   top: 10px;
 }
 
-.project:hover .learnMore{
+.project:hover .learnMore {
   bottom: 10px;
 }
 
@@ -375,9 +377,9 @@ section {
 }
 
 .project:hover .learnMore:active {
-	outline: none;
-	bottom: 8px;
-	box-shadow: none;
+  outline: none;
+  bottom: 8px;
+  box-shadow: none;
 }
 
 #contact {
@@ -533,21 +535,21 @@ footer:hover {
 }
 
 .modalFooter p:before {
-  content: attr(data-title)':';
+  content: attr(data-title) ':';
   background-color: rgb(215, 255, 134);
   margin-right: 3px;
 }
 
 .closeModal {
   width: 100%;
-	position: relative;
+  position: relative;
   color: white;
   background-color: var(--menu-button-color);
-	box-shadow: var(--buttons-shadow);
+  box-shadow: var(--buttons-shadow);
   font-size: 18px;
   padding: 10px;
   border-radius: 10px;
-	border: none;
+  border: none;
 }
 
 .closeModal:focus {
@@ -555,8 +557,8 @@ footer:hover {
 }
 
 .closeModal:active {
-	top: 2px;
-	box-shadow: none;
+  top: 2px;
+  box-shadow: none;
 }
 
 .closeModal:hover {
@@ -630,6 +632,12 @@ footer:hover {
   .projects,
   #contact-form {
     padding: 100px 250px;
+    font-size: 1.3em;
+  }
+
+  .portfolio > h3,
+  .contact > h2 {
+    font-size: 2em;
   }
 }
 

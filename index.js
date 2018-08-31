@@ -9,6 +9,7 @@ const modal = document.querySelector('#modal')
 
 menuButton.addEventListener('click', toggleMenu)
 document.body.addEventListener('click', hideMenu)
+window.addEventListener('load', populateHtml)
 contactForm.addEventListener('submit', onContactSubmit)
 document.addEventListener('scroll', e => {
   const body = document.body,
@@ -62,11 +63,9 @@ function onContactSubmit(e) {
 }
 
 function openModal(id) {
-  console.log('the id', id)
   const project = projects.find(project => project.src === id)
   modal.style.display = 'flex'
   modal.classList.add('show')
-  const modalContent = modal.querySelector('.modalContent')
   const header = modal.querySelector('.modalHeader')
   const body = modal.querySelector('.modalBody')
   const footer = modal.querySelector('.modalFooter')
@@ -111,36 +110,43 @@ function closeModal() {
   modal.removeEventListener('click', handleModalClick)
 }
 
-let skillsHtml = ''
-for (const skill of skills) {
-  const html = `
-    <div class="skillTitle">${skill.title}</div>
-    <div class="percentage">
+function populateHtml() {
+  let skillsHtml = ''
+  for (const skill of skills) {
+    const html = `
+    <div class="skillTitle" aria-title="My Skill Title">${skill.title}</div>
+    <div class="percentage" aria-percentage="My Skill Percentage">
     <span class="skillPercentageIndicator" style="width: ${
       skill.percentage
     }%;"></span>
     <span class="skillPercentage">${skill.percentage}%</span>
                     </div>
                     `
-  skillsHtml += html
-}
+    skillsHtml += html
+  }
+  skillsEl.setAttribute('aria-skills-list', 'This is my skills list')
+  skillsEl.innerHTML = skillsHtml
 
-skillsEl.innerHTML = skillsHtml
-
-let projectsHtml = ''
-for (const project of projects) {
-  const html = `
-  <a class="project animated fade-in" onclick="openModal('${project.src}')">
+  let projectsHtml = ''
+  for (const project of projects) {
+    const html = `
+  <a class="project animated fade-in" aria-projects="My Projects" onclick="openModal('${
+    project.src
+  }')">
   <img class="projectImg ${!project.src ? 'noImage' : ''}" src="${
-    project.src ? project.src : './assets/noImage.png'
-  }" alt="${project.name} Photo" >
-  <h3 class="projectTitle">${project.name}</h3>
-  <button class="learnMore"  id="${
+      project.src ? project.src : './assets/noImage.png'
+    }" alt="${project.name} Photo" >
+  <h3 class="projectTitle" aria-name="This is ${project.name}" >${
+      project.name
+    }</h3>
+  <button class="learnMore" aria-info="Click to read more"  id="${
     project.src
   }" onclick="openModal(this.id)">Read More!</button>
   </a>
   `
-  projectsHtml += html
-}
+    projectsHtml += html
+  }
 
-projectsEl.innerHTML = projectsHtml
+  projectsEl.setAttribute('aria-projects', 'This is my projects')
+  projectsEl.innerHTML = projectsHtml
+}
