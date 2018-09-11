@@ -1,5 +1,4 @@
 /* My Variables */
-
 :root {
   --menu-button-color: #faa600;
   --quite-background: #ffe4c466;
@@ -74,7 +73,8 @@ a:visited {
 }
 
 .menuButton:active,
-input[type='submit']:active {
+input[type='submit']:active,
+.closeModal:active {
   box-shadow: none;
   top: 2px;
 }
@@ -237,7 +237,7 @@ section {
   margin: 0;
 }
 
-.about > * {
+.about>* {
   min-width: 100%;
   background-color: rgba(70, 62, 62, 0.84);
   border: 0.3px solid black;
@@ -302,12 +302,12 @@ section {
   padding: 50px 0;
 }
 
-.portfolio > h2 {
+.portfolio>h2 {
   display: inline-block;
   position: relative;
 }
 
-.portfolio > h2::after {
+.portfolio>h2::after {
   content: '';
   display: block;
   position: absolute;
@@ -347,7 +347,7 @@ section {
   transition: opacity 0.1s linear;
 }
 
-.projectImg.noImage + .projectTitle {
+.projectImg.noImage+.projectTitle {
   top: 10px;
 }
 
@@ -454,7 +454,6 @@ footer:hover {
 }
 
 /* M O D E L */
-
 .modal {
   position: fixed;
   top: 0;
@@ -526,6 +525,7 @@ footer:hover {
   border: 1px solid black;
   padding: 10px;
 }
+
 .modalFooter p {
   font-weight: lighter;
   color: black;
@@ -556,13 +556,40 @@ footer:hover {
   outline: none;
 }
 
-.closeModal:active {
-  top: 2px;
-  box-shadow: none;
-}
-
 .closeModal:hover {
   cursor: pointer;
+}
+
+/* My CV */
+.cvContainer {
+  position: fixed;
+  z-index: 1000;
+  min-width: 150px;
+  text-align: center;
+  top: 20px;
+  left: -40px;
+  transform: rotate(-45deg);
+  padding: 5px;
+  background-color: var(--menu-button-color);
+  box-shadow: 0 1px 5px 0px #f0dcdcbd;
+}
+
+.cvContainer a {
+  color: white;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  user-select: none;
+}
+
+.cvContainer:hover {
+  background-color: blueviolet
+}
+
+.cvContainer:active {
+  box-shadow: none;
+  top: 22px;
+  left: -38px;
 }
 
 @media screen and (max-width: 760px) {
@@ -570,6 +597,7 @@ footer:hover {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
+
   .about,
   .projects,
   #contact-form {
@@ -577,15 +605,19 @@ footer:hover {
     grid-gap: 20px;
     padding: 50px;
   }
+
   .project .projectTitle {
     top: 10px;
   }
+
   .project button {
     bottom: 10px;
   }
+
   .project img {
     opacity: 0.5;
   }
+
   .homeDesc,
   h2,
   h3 {
@@ -597,6 +629,7 @@ footer:hover {
     grid-template-rows: auto 1fr;
     font-size: 0.8em;
   }
+
   .modalFooter p {
     font-size: inherit;
     margin-bottom: 10px;
@@ -604,6 +637,7 @@ footer:hover {
 }
 
 @media screen and (max-width: 400px) {
+
   .about,
   .projects,
   #contact-form {
@@ -622,12 +656,14 @@ footer:hover {
   footer {
     display: block;
   }
+
   footer p {
     padding: 0 5px;
   }
 }
 
 @media screen and (min-width: 1300px) {
+
   .about,
   .projects,
   #contact-form {
@@ -635,38 +671,46 @@ footer:hover {
     font-size: 1.3em;
   }
 
-  .portfolio > h3,
-  .contact > h2 {
+  .portfolio>h3,
+  .contact>h2 {
     font-size: 2em;
   }
 }
 
 @keyframes slideInAndOut {
+
   0%,
   60%,
   100% {
     transform: translateY(0%);
   }
+
   10%,
   50% {
     transform: translateY(40%);
   }
+
   20%,
   40% {
     transform: translateY(80%);
   }
+
   30% {
     transform: translateY(100%);
   }
+
   68% {
     transform: translateY(-40%);
   }
+
   78% {
     transform: translateY(-80%);
   }
+
   87% {
     transform: translateY(-100%);
   }
+
   94% {
     transform: translateY(-50%);
   }
