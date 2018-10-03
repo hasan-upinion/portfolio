@@ -5,7 +5,7 @@
 const skills = [
   {
     title: 'js',
-    percentage: 80
+    percentage: 90
   },
   {
     title: 'python',
@@ -17,7 +17,7 @@ const skills = [
   },
   {
     title: 'react',
-    percentage: 90
+    percentage: 95
   },
   {
     title: 'react native',
@@ -34,6 +34,10 @@ const skills = [
   {
     title: 'webpack',
     percentage: 70
+  },
+  {
+    title: 'redux',
+    percentage: 80
   },
   {
     title: 'HTML',
@@ -68,6 +72,15 @@ const projects = [
     position:
       'I built it along with two other colleuges of mine. I did both the back and front end. AngularJs and material design used on the front-end, NodeJS was the back-end and mySql was in the database. https://github.com/hyf-project5/hyfer',
     url: 'http://hyfer.hackyourfuture.net/timeline'
+  },
+  {
+    name: 'Chat App',
+    src: './assets/chatApp.jpg',
+    description:
+      'This is my first experience with React Native. I wanted to make a simple app to try RN out, but now I am using it with my friends(instead of WhatsApp :) ).',
+    position:
+      'I have built it with the great server provider Firebase. It has many features; like authentication, local storage, and a smooth navigation flow. Check: https://expo.io/@hasan-sh/chatApp',
+    url: 'https://github.com/hasanshahoud/Chatting_RN'
   },
   {
     name: 'See my other repositories.',
