@@ -75,7 +75,7 @@ const projects = [
   },
   {
     name: 'Chat App',
-    src: './assets/chatApp.jpg',
+    src: './assets/chatApp.png',
     description:
       'This is my first experience with React Native. I wanted to make a simple app to try RN out, but now I am using it with my friends(instead of WhatsApp :) ).',
     position:
