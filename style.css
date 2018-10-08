@@ -534,6 +534,10 @@ footer:hover {
   font-size: 1.5em;
 }
 
+.modalFooter p a {
+  color: #333;
+}
+
 .modalFooter p:before {
   content: attr(data-title) ':';
   background-color: rgb(215, 255, 134);
