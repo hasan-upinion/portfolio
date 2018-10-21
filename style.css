@@ -237,7 +237,7 @@ section {
   margin: 0;
 }
 
-.about > * {
+.about>* {
   min-width: 100%;
   background-color: rgba(70, 62, 62, 0.84);
   border: 0.3px solid black;
@@ -302,12 +302,12 @@ section {
   padding: 50px 0;
 }
 
-.portfolio > h2 {
+.portfolio>h2 {
   display: inline-block;
   position: relative;
 }
 
-.portfolio > h2::after {
+.portfolio>h2::after {
   content: '';
   display: block;
   position: absolute;
@@ -333,10 +333,12 @@ section {
 
 .project:hover .projectTitle {
   top: 10px;
+  opacity: 1;
 }
 
 .project:hover .learnMore {
   bottom: 10px;
+  opacity: 1;
 }
 
 .projectImg,
@@ -347,16 +349,14 @@ section {
   transition: opacity 0.1s linear;
 }
 
-.projectImg.noImage + .projectTitle {
-  top: 10px;
-}
 
 .projectTitle,
 .learnMore {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  transition: all 0.3s ease-in;
+  opacity: 0;
+  transition: all 0.3s ease-in, opacity 0.5s ease-in-out;
   background-color: var(--menu-button-color);
   color: #3d3d3d;
   padding: 10px;
@@ -641,6 +641,7 @@ footer:hover {
 }
 
 @media screen and (max-width: 400px) {
+
   .about,
   .projects,
   #contact-form {
@@ -666,6 +667,7 @@ footer:hover {
 }
 
 @media screen and (min-width: 1300px) {
+
   .about,
   .projects,
   #contact-form {
@@ -673,13 +675,14 @@ footer:hover {
     font-size: 1.3em;
   }
 
-  .portfolio > h3,
-  .contact > h2 {
+  .portfolio>h3,
+  .contact>h2 {
     font-size: 2em;
   }
 }
 
 @keyframes slideInAndOut {
+
   0%,
   60%,
   100% {

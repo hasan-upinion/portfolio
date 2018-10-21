@@ -62,8 +62,8 @@ function onContactSubmit(e) {
   success.classList.add('show')
 }
 
-function openModal(id) {
-  const project = projects.find(project => project.src === id)
+function openModal(url) {
+  const project = projects.find(project => project.url === url)
   modal.style.display = 'flex'
   modal.classList.add('show')
   const header = modal.querySelector('.modalHeader')
@@ -71,12 +71,16 @@ function openModal(id) {
   const footer = modal.querySelector('.modalFooter')
 
   const img = `
-    <img src="${id ? id : './assets/noImage.png'}" class="modalHeaderImage" >
+    <img src="${
+      project.src ? project.src : './assets/noImage.png'
+    }" class="modalHeaderImage" >
   `
   const projectName = `<h2 class="modalHeaderText">${project.name}</h2>`
   const position = `
     <p data-title='Position' class="position">${project.position}</p>
   `
+  console.log(project.url)
+
   const link = `<a  href="${
     project.url
   }" target="_blank" class="link">See website</a>`
@@ -131,7 +135,7 @@ function populateHtml() {
   for (const project of projects) {
     const html = `
   <a class="project animated fade-in" aria-projects="My Projects" onclick="openModal('${
-    project.src
+    project.url
   }')">
   <img class="projectImg ${!project.src ? 'noImage' : ''}" src="${
       project.src ? project.src : './assets/noImage.png'
@@ -140,7 +144,7 @@ function populateHtml() {
       project.name
     }</h3>
   <button class="learnMore" aria-info="Click to read more"  id="${
-    project.src
+    project.url
   }" onclick="openModal(this.id)">Read More!</button>
   </a>
   `
