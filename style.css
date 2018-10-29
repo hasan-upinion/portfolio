@@ -1,721 +1,718 @@
 /* My Variables */
 :root {
-  --menu-button-color: #faa600;
-  --quite-background: #ffe4c466;
-  --footer-background: #000000cc;
-  --buttons-shadow: 0 2px 5px #000000bd;
+    --menu-button-color: #faa600;
+    --quite-background: #ffe4c466;
+    --footer-background: #000000cc;
+    --buttons-shadow: 0 2px 5px #000000bd;
 }
 
 * {
-  padding: 0;
-  box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .container {
-  position: relative;
+    position: relative;
 }
 
 a {
-  color: white;
-  text-shadow: 0 4px 5px rgba(25, 41, 8, 0.377);
-  letter-spacing: 1px;
-  transition: font-size 0.1s ease-in;
+    color: white;
+    text-shadow: 0 4px 5px rgba(25, 41, 8, 0.377);
+    letter-spacing: 1px;
+    transition: font-size 0.1s ease-in;
 }
 
 a:visited {
-  color: gray;
+    color: gray;
 }
 
 .menuContainer {
-  min-width: 50px;
-  min-height: 50px;
-  z-index: 10;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+    min-width: 50px;
+    min-height: 50px;
+    z-index: 10;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
 .menuButtonContainer {
-  display: grid;
-  justify-content: end;
+    display: grid;
+    justify-content: end;
 }
 
 .menuButton {
-  width: 50px;
-  height: 50px;
-  background-color: var(--menu-button-color);
-  border-radius: 100%;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  grid-gap: 5px;
-  box-shadow: var(--buttons-shadow);
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.2s linear;
+    width: 50px;
+    height: 50px;
+    background-color: var(--menu-button-color);
+    border-radius: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 5px;
+    box-shadow: var(--buttons-shadow);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s linear;
 }
 
 .menuButton.clicked {
-  transform: rotate(45deg);
-  border-radius: 0% 100% 100%;
-  background-color: #9a9c9d;
+    transform: rotate(45deg);
+    border-radius: 0% 100% 100%;
+    background-color: #9a9c9d;
 }
 
 .menuButton.hide {
-  transform: translateY(70px);
-  border-radius: 100%;
+    transform: translateY(70px);
+    border-radius: 100%;
 }
 
 .menuButton:active,
 input[type='submit']:active,
 .closeModal:active {
-  box-shadow: none;
-  top: 2px;
+    box-shadow: none;
+    top: 2px;
 }
 
 .menuButton span,
 .menuButton.clicked::after,
 .menuButton.clicked::before {
-  width: 20px;
-  height: 3px;
-  background: white;
-  display: inline-block;
-  border-radius: 10px;
+    width: 20px;
+    height: 3px;
+    background: white;
+    display: inline-block;
+    border-radius: 10px;
 }
 
 .menuButton.clicked::after,
 .menuButton.clicked::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) rotate(90deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
 }
 
 .menuButton.clicked::after {
-  transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
 }
 
 .menuButton.clicked span {
-  display: none;
+    display: none;
 }
 
 .menu {
-  min-height: 100px;
-  display: none;
-  padding: 5px;
-  position: relative;
-  bottom: 15px;
-  box-shadow: 0px 1px 10px 0px black;
-  background-color: white;
+    min-height: 100px;
+    display: none;
+    padding: 5px;
+    position: relative;
+    bottom: 15px;
+    box-shadow: 0px 1px 10px 0px black;
+    background-color: white;
 }
 
 .menu a {
-  color: black;
+    color: black;
 }
 
 .menu a:hover {
-  text-shadow: none;
+    text-shadow: none;
 }
 
 .menu.show {
-  display: inline-grid;
-  animation-delay: 0.1s !important;
-  animation-name: bounceInUp;
+    display: inline-grid;
+    animation-delay: 0.1s !important;
+    animation-name: bounceInUp;
 }
 
 .menu.hide {
-  display: none;
+    display: none;
 }
 
 main {
-  box-shadow: 0 3px 5px 0 white;
-  height: 100vh;
-  background: url('./assets/homeBackground.jpg') center center/cover fixed;
+    box-shadow: 0 3px 5px 0 white;
+    height: 100vh;
+    background: url('./assets/homeBackground.jpg') center center/cover fixed;
 }
 
 .homeDescContainer {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .homeDesc {
-  font-size: 24px;
-  border: solid 1px beige;
-  border-left: none;
-  padding: 20px;
-  background: var(--quite-background);
-  border-radius: 2px;
-  text-shadow: 0 0 10px black;
-  position: relative;
-  overflow: hidden;
+    font-size: 24px;
+    border: solid 1px beige;
+    border-left: none;
+    padding: 20px;
+    background: var(--quite-background);
+    border-radius: 2px;
+    text-shadow: 0 0 10px black;
+    position: relative;
+    overflow: hidden;
 }
 
 .homeDesc::after,
 .homeDesc::before {
-  content: '';
-  display: block;
-  width: 2px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: beige;
-  animation: slideInAndOut 0.91s infinite linear;
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: beige;
+    animation: slideInAndOut 0.91s infinite linear;
 }
 
 .homeDesc::after {
-  left: -1px;
+    left: -1px;
 }
 
 .homeDesc::before {
-  right: -1px;
-  animation-duration: 4s !important;
+    right: -1px;
+    animation-duration: 4s !important;
 }
 
 .downArrow {
-  width: 0;
-  height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 30px solid white;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  transition: margin-top 0.1s ease-in;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: margin-top 0.1s ease-in;
 }
 
 .downArrow:hover {
-  animation-name: jello;
+    animation-name: jello;
 }
 
 .arrowText {
-  color: black;
-  position: absolute;
-  top: -28px;
-  font-size: 10px;
+    color: black;
+    position: absolute;
+    top: -28px;
+    font-size: 10px;
 }
 
 section {
-  min-height: 50vh;
+    min-height: 50vh;
 }
 
 .about,
 .projects,
 #contact-form {
-  margin: 0 auto;
-  padding: 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 1fr;
-  grid-gap: 10px 50px;
+    margin: 0 auto;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 10px 50px;
 }
 
 .projects,
 #contact-form {
-  grid-gap: 20px 10px;
+    grid-gap: 20px 10px;
 }
 
 .about {
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
 }
 
 #about {
-  background: url('./assets/aboutBackground.jpg') center center/cover fixed;
-  margin: 0;
+    background: url('./assets/aboutBackground.jpg') center center/cover fixed;
+    margin: 0;
 }
 
-.about>* {
-  min-width: 100%;
-  background-color: rgba(70, 62, 62, 0.84);
-  border: 0.3px solid black;
-  padding: 10px;
-  box-shadow: 0 1px 5px 0px #ffffff9e;
-  font-weight: 500;
-  color: whitesmoke;
+.about > * {
+    min-width: 100%;
+    background-color: rgba(70, 62, 62, 0.84);
+    border: 0.3px solid black;
+    padding: 10px;
+    box-shadow: 0 1px 5px 0px #ffffff9e;
+    font-weight: 500;
+    color: whitesmoke;
 }
 
 .about p {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 20px;
 }
 
 .about h2 {
-  text-align: center;
-  align-self: center;
-  grid-column: 1 / -1;
-  margin: 0;
-  position: relative;
+    text-align: center;
+    align-self: center;
+    grid-column: 1 / -1;
+    margin: 0;
+    position: relative;
 }
 
 .skills {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-gap: 2px;
-  width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2px;
+    width: 100%;
 }
 
 .skillTitle {
-  text-transform: uppercase;
-  background: #92da72;
-  padding: 0 2px;
-  color: purple;
-  display: flex;
-  align-items: flex-end;
+    text-transform: uppercase;
+    background: #92da72;
+    padding: 0 2px;
+    color: purple;
+    display: flex;
+    align-items: flex-end;
 }
 
 .percentage {
-  min-width: 100px;
-  background: var(--quite-background);
-  position: relative;
+    min-width: 100px;
+    background: var(--quite-background);
+    position: relative;
 }
 
 .skillPercentage {
-  position: absolute;
-  right: 0;
-  top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .skillPercentageIndicator {
-  min-height: 100%;
-  display: block;
-  background: #9ea1ec;
+    min-height: 100%;
+    display: block;
+    background: #9ea1ec;
 }
 
 .portfolio {
-  height: 100%;
-  text-align: center;
-  padding: 50px 0;
+    height: 100%;
+    text-align: center;
+    padding: 50px 0;
 }
 
-.portfolio>h2 {
-  display: inline-block;
-  position: relative;
+.portfolio > h2 {
+    display: inline-block;
+    position: relative;
 }
 
-.portfolio>h2::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: -10px;
-  left: 25%;
-  background-color: black;
-  width: 50%;
-  height: 2px;
+.portfolio > h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+    background-color: black;
+    width: 50%;
+    height: 2px;
 }
 
 .project {
-  max-height: 300px;
-  box-shadow: 0 2px 5px 0 black;
-  padding: 10px;
-  position: relative;
-  padding: 0;
-  overflow: hidden;
+    max-height: 300px;
+    box-shadow: 0 2px 5px 0 black;
+    padding: 10px;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
 }
 
 .project:hover .projectImg {
-  opacity: 0.467;
+    opacity: 0.467;
 }
 
 .project:hover .projectTitle {
-  top: 10px;
-  opacity: 1;
+    top: 10px;
+    opacity: 1;
 }
 
 .project:hover .learnMore {
-  bottom: 10px;
-  opacity: 1;
+    bottom: 10px;
+    opacity: 1;
 }
 
 .projectImg,
 .modalHeaderImage {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.1s linear;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.1s linear;
 }
-
 
 .projectTitle,
 .learnMore {
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-  opacity: 0;
-  transition: all 0.3s ease-in, opacity 0.5s ease-in-out;
-  background-color: var(--menu-button-color);
-  color: #3d3d3d;
-  padding: 10px;
-  border-radius: 5px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 0;
+    transition: all 0.3s ease-in, opacity 0.5s ease-in-out;
+    background-color: var(--menu-button-color);
+    color: #3d3d3d;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .projectTitle {
-  top: -100px;
-  margin: 0;
-  text-shadow: none;
+    top: -100px;
+    margin: 0;
+    text-shadow: none;
 }
 
 .learnMore {
-  bottom: -100px;
-  border: none;
-  cursor: pointer;
-  box-shadow: var(--buttons-shadow);
+    bottom: -100px;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--buttons-shadow);
 }
 
 .project:hover .learnMore:active {
-  outline: none;
-  bottom: 8px;
-  box-shadow: none;
+    outline: none;
+    bottom: 8px;
+    box-shadow: none;
 }
 
 #contact {
-  position: relative;
+    position: relative;
 }
 
 .contact {
-  min-height: 50vh;
-  text-align: center;
-  background-color: rgb(205, 208, 214);
-  padding: 1px;
+    min-height: 50vh;
+    text-align: center;
+    background-color: rgb(205, 208, 214);
+    padding: 1px;
 }
 
 #contact-form {
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-  justify-content: center;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    justify-content: center;
 }
 
 input,
 textarea {
-  outline: none;
-  border: 0;
-  border-radius: 1px;
-  padding: 10px 15px;
-  font-size: 12pt;
-  background-color: rgba(191, 191, 202, 1);
-  color: black;
+    outline: none;
+    border: 0;
+    border-radius: 1px;
+    padding: 10px 15px;
+    font-size: 12pt;
+    background-color: rgba(191, 191, 202, 1);
+    color: black;
 }
 
 textarea {
-  min-height: 100px;
+    min-height: 100px;
 }
 
 input[type='submit'] {
-  justify-self: center;
-  background: var(--menu-button-color);
-  color: white;
-  box-shadow: var(--buttons-shadow);
-  position: relative;
-  cursor: pointer;
+    justify-self: center;
+    background: var(--menu-button-color);
+    color: white;
+    box-shadow: var(--buttons-shadow);
+    position: relative;
+    cursor: pointer;
 }
 
 input[type='submit']:hover {
-  background-color: blueviolet;
+    background-color: blueviolet;
 }
 
 #success.hide {
-  display: none;
+    display: none;
 }
 
 #success.show {
-  display: inherit;
+    display: inherit;
 }
 
 footer {
-  padding: 50px;
-  width: 100%;
-  background-color: var(--footer-background);
-  color: #a7bb9ea6;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+    padding: 50px;
+    width: 100%;
+    background-color: var(--footer-background);
+    color: #a7bb9ea6;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 footer a {
-  padding: 0 5px;
+    padding: 0 5px;
 }
 
 footer:hover {
-  color: #a7bb9e;
+    color: #a7bb9e;
 }
 
 /* M O D E L */
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  overflow-y: scroll;
-  background-color: rgba(0, 0, 0, 0.76);
-  z-index: 20;
-  justify-content: center;
-  align-items: center;
-  display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.76);
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
 
 .modal.show .modalContent {
-  animation-name: flipInY;
-  animation-duration: 0.5s !important;
+    animation-name: flipInY;
+    animation-duration: 0.5s !important;
 }
 
 .modal:not(.show) .modalContent {
-  animation-name: zoomOut;
-  animation-duration: 0.5s;
+    animation-name: zoomOut;
+    animation-duration: 0.5s;
 }
 
 .modalContent {
-  max-width: 75%;
-  width: 75%;
-  min-height: 70%;
-  max-height: 100%;
-  background-color: black;
-  color: white;
-  position: relative;
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
-  display: grid;
-  grid-template-columns: 1fr min-content;
-  grid-template-rows: auto 1fr;
+    max-width: 75%;
+    width: 75%;
+    min-height: 70%;
+    max-height: 100%;
+    background-color: black;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: auto 1fr;
 }
 
 .modalHeader {
-  grid-column: 1 / -1;
-  box-shadow: 0 1px 2px 0 black;
-  position: relative;
+    grid-column: 1 / -1;
+    box-shadow: 0 1px 2px 0 black;
+    position: relative;
 }
 
 .modalHeaderText {
-  padding: 5px;
-  margin: 5px;
+    padding: 5px;
+    margin: 5px;
 }
 
 .modalBody {
-  position: relative;
-  display: inherit;
+    position: relative;
+    display: inherit;
 }
 
 .modalBody .link {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 2px 5px;
-  font-size: 1.2em;
-  background: black;
-  color: white;
-  opacity: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2px 5px;
+    font-size: 1.2em;
+    background: black;
+    color: white;
+    opacity: 1;
 }
 
 .modalFooter {
-  background-color: white;
-  min-width: 200px;
-  border: 1px solid black;
-  padding: 10px;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid black;
+    padding: 10px;
 }
 
 .modalFooter p {
-  font-weight: lighter;
-  color: black;
-  font-family: cursive, Arial, Helvetica, sans-serif;
-  margin-bottom: 50px;
-  font-size: 1.5em;
+    font-weight: lighter;
+    color: black;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    font-size: 1.5em;
 }
 
 .modalFooter p a {
-  color: #333;
+    color: #333;
 }
 
 .modalFooter p:before {
-  content: attr(data-title) ':';
-  background-color: rgb(215, 255, 134);
-  margin-right: 3px;
+    content: attr(data-title) ':';
+    background-color: rgb(215, 255, 134);
+    margin-right: 3px;
 }
 
 .closeModal {
-  width: 100%;
-  position: relative;
-  color: white;
-  background-color: var(--menu-button-color);
-  box-shadow: var(--buttons-shadow);
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
+    width: 100%;
+    position: relative;
+    color: white;
+    background-color: var(--menu-button-color);
+    box-shadow: var(--buttons-shadow);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
 }
 
 .closeModal:focus {
-  outline: none;
+    outline: none;
 }
 
 .closeModal:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* My CV */
 .cvContainer {
-  position: fixed;
-  z-index: 10;
-  min-width: 150px;
-  text-align: center;
-  top: 20px;
-  left: -40px;
-  transform: rotate(-45deg);
-  padding: 5px;
-  background-color: var(--menu-button-color);
-  box-shadow: 0 1px 5px 0px #f0dcdcbd;
+    position: fixed;
+    z-index: 10;
+    min-width: 150px;
+    text-align: center;
+    top: 20px;
+    left: -40px;
+    transform: rotate(-45deg);
+    padding: 5px;
+    background-color: var(--menu-button-color);
+    box-shadow: 0 1px 5px 0px #fcdcbd;
+    animation: zoomInLeft 1s 0.5s;
 }
 
 .cvContainer a {
-  color: white;
-  display: block;
-  font-weight: 600;
-  text-decoration: none;
-  user-select: none;
+    color: white;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    user-select: none;
 }
 
 .cvContainer:hover {
-  background-color: blueviolet;
+    background-color: blueviolet;
 }
 
 .cvContainer:active {
-  box-shadow: none;
-  top: 22px;
-  left: -38px;
+    box-shadow: none;
+    top: 22px;
+    left: -38px;
 }
 
 @media screen and (max-width: 760px) {
-  .about {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 
-  .about,
-  .projects,
-  #contact-form {
-    font-size: 18px;
-    grid-gap: 20px;
-    padding: 50px;
-  }
+    .about,
+    .projects,
+    #contact-form {
+        font-size: 18px;
+        grid-gap: 20px;
+        padding: 50px;
+    }
 
-  .project .projectTitle {
-    top: 10px;
-  }
+    .project .projectTitle {
+        top: 10px;
+    }
 
-  .project button {
-    bottom: 10px;
-  }
+    .project button {
+        bottom: 10px;
+    }
 
-  .project img {
-    opacity: 0.5;
-  }
+    .project img {
+        opacity: 0.5;
+    }
 
-  .homeDesc,
-  h2,
-  h3 {
-    font-size: 18px;
-  }
+    .homeDesc,
+    h2,
+    h3 {
+        font-size: 18px;
+    }
 
-  .modalContent {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    font-size: 0.8em;
-  }
+    .modalContent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        font-size: 0.8em;
+    }
 
-  .modalFooter p {
-    font-size: inherit;
-    margin-bottom: 10px;
-  }
+    .modalFooter p {
+        font-size: inherit;
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 400px) {
+    .about,
+    .projects,
+    #contact-form {
+        padding: 15px;
+        grid-template-columns: 1fr;
+    }
 
-  .about,
-  .projects,
-  #contact-form {
-    padding: 15px;
-    grid-template-columns: 1fr;
-  }
+    #contact-form {
+        margin-bottom: 15px;
+    }
 
-  #contact-form {
-    margin-bottom: 15px;
-  }
+    .homeDesc {
+        margin: 0 5px;
+    }
 
-  .homeDesc {
-    margin: 0 5px;
-  }
+    footer {
+        display: block;
+    }
 
-  footer {
-    display: block;
-  }
-
-  footer p {
-    padding: 0 5px;
-  }
+    footer p {
+        padding: 0 5px;
+    }
 }
 
 @media screen and (min-width: 1300px) {
+    .about,
+    .projects,
+    #contact-form {
+        padding: 100px 250px;
+        font-size: 1.3em;
+    }
 
-  .about,
-  .projects,
-  #contact-form {
-    padding: 100px 250px;
-    font-size: 1.3em;
-  }
-
-  .portfolio>h3,
-  .contact>h2 {
-    font-size: 2em;
-  }
+    .portfolio > h3,
+    .contact > h2 {
+        font-size: 2em;
+    }
 }
 
 @keyframes slideInAndOut {
+    0%,
+    60%,
+    100% {
+        transform: translateY(0%);
+    }
 
-  0%,
-  60%,
-  100% {
-    transform: translateY(0%);
-  }
+    10%,
+    50% {
+        transform: translateY(40%);
+    }
 
-  10%,
-  50% {
-    transform: translateY(40%);
-  }
+    20%,
+    40% {
+        transform: translateY(80%);
+    }
 
-  20%,
-  40% {
-    transform: translateY(80%);
-  }
+    30% {
+        transform: translateY(100%);
+    }
 
-  30% {
-    transform: translateY(100%);
-  }
+    68% {
+        transform: translateY(-40%);
+    }
 
-  68% {
-    transform: translateY(-40%);
-  }
+    78% {
+        transform: translateY(-80%);
+    }
 
-  78% {
-    transform: translateY(-80%);
-  }
+    87% {
+        transform: translateY(-100%);
+    }
 
-  87% {
-    transform: translateY(-100%);
-  }
-
-  94% {
-    transform: translateY(-50%);
-  }
+    94% {
+        transform: translateY(-50%);
+    }
 }
