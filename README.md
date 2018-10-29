@@ -12,7 +12,7 @@ I've created this portfolio freshly! Here you can see who I am, and what I'm cap
 This portfolio was created with pure *JavaScript* and *HTML/CSS*. There's no third-parties involved. And was made simple and with love.
 
 
-Should you have any further questions, or want to say hello please [contact](https://hasanshahoud.github.io/portfolio/#contact)
+Should you have any further questions, or want to say hello please [contact](https://hasan-sh.github.io/portfolio/#contact)
 
 
 
