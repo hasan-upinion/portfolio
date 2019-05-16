@@ -4,16 +4,12 @@
 
 const skills = [
   {
-    title: 'js',
+    title: 'javascript',
     percentage: 90
   },
   {
     title: 'python',
     percentage: 65
-  },
-  {
-    title: 'nodejs',
-    percentage: 75
   },
   {
     title: 'react',
@@ -25,28 +21,39 @@ const skills = [
   },
   {
     title: 'angular',
-    percentage: 65
+    percentage: 55
+  },
+  {
+    title: 'redux',
+    percentage: 90
+  },
+  {
+    title: 'nodejs',
+    percentage: 75
+  },
+  {
+    title: 'Docker',
+    percentage: 80
+  },
+  {
+    title: 'Graphql',
+    percentage: 85
   },
   {
     title: 'mysql',
-    percentage: 60
+    percentage: 70
+  },
+  {
+    title: 'sequelize',
+    percentage: 85
+  },
+  {
+    title: 'Chatbots',
+    percentage: 80
   },
   {
     title: 'webpack',
     percentage: 70
-  },
-  {
-    title: 'redux',
-    percentage: 80
-  },
-  {
-    title: 'HTML',
-    percentage: 75
-  },
-
-  {
-    title: 'css',
-    percentage: 85
   },
   {
     title: 'cms',
@@ -55,6 +62,17 @@ const skills = [
 ]
 
 const projects = [
+  {
+    name: 'Upinion',
+    src: './assets/upinion.png',
+    description:
+      'Upinion can help you reach your target audience for qualitative, quantitative or hybrid research.',
+    position:
+      `At Upinion I did a full-stack development and with a fast-growing team in which we used scrum technologies as a communication medium. 
+      - Front-end: Applications that were built with React, redux(-saga) and are fully testable. 
+      - Back-end: Mainly NodeJS. Automated micro-services(docker). Worked extensively on building chatbots for several platforms(Facebook, sms and WhatsApp).`,
+    url: 'https://www.upinion.com'
+  },
   {
     name: 'Dathuis',
     src: './assets/dathuis.PNG',

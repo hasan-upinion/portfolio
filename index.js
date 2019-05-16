@@ -154,3 +154,10 @@ function populateHtml() {
   projectsEl.setAttribute('aria-projects', 'This is my projects');
   projectsEl.innerHTML = projectsHtml;
 }
+
+function scrollToSection(section) {
+  const target = document.querySelector(section);
+  target.scrollIntoView({
+    behavior: 'smooth'
+  });
+}

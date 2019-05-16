@@ -13,10 +13,10 @@
 <body>
     <div class="menuContainer">
         <div class="menu animated">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a onclick="scrollToSection('#home')" >Home</a>
+            <a onclick="scrollToSection('#about')">About</a>
+            <a onclick="scrollToSection('#portfolio')">Portfolio</a>
+            <a onclick="scrollToSection('#contact')">Contact</a>
             <a href="/assets/cv.pdf" download="HasanShahoudsCV">My CV</a>
         </div>
 
@@ -50,7 +50,7 @@
                     Hello! Welcome to my portfolio!
                 </div>
 
-                <a href="#about" class="downArrow animated">
+                <a class="downArrow animated" onclick="scrollToSection('#about')">
                     <span class="arrowText">
                         About
                     </span>

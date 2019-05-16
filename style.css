@@ -270,7 +270,7 @@ section {
 }
 
 .skillTitle {
-    text-transform: uppercase;
+    text-transform: capitalize;
     background: #92da72;
     padding: 0 2px;
     color: purple;
@@ -528,7 +528,7 @@ footer:hover {
 .modalFooter p {
     font-weight: lighter;
     color: black;
-    font-family: cursive, Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     margin-bottom: 50px;
     font-size: 1.5em;
 }
